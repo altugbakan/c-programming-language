@@ -1,12 +1,14 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
     int c, bc, tc, nl;
 
     bc = tc = nl = 0;
 
     /* use Ctrl+D to send EOF */
-    while ((c = getchar()) != EOF) {
+    while ((c = getchar()) != EOF)
+    {
         if (c == ' ')
             ++bc;
         if (c == '\t')

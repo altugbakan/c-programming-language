@@ -1,9 +1,11 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
     int c;
 
-    while ((c = getchar()) != EOF) {
+    while ((c = getchar()) != EOF)
+    {
         if (c == '\t')
             printf("\\t");
         else if (c == '\b')

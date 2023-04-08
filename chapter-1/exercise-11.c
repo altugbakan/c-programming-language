@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
     printf("We can test the word count program using an empty input, ");
     printf("a single word input, a multi word input, a multi word input with multiple spaces, ");
     printf("a multi word input with multiple tabs, a multi word input with multiple newlines, ");

@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
     printf("tab: \t\n");
     printf("backspace: \b\n");
     printf("double quote: \"\n");

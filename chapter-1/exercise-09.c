@@ -1,19 +1,23 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
     int c, space;
     space = 0;
 
-    while ((c = getchar()) != EOF) {
-        if (c == ' ') {
+    while ((c = getchar()) != EOF)
+    {
+        if (c == ' ')
+        {
             if (!space)
                 putchar(c);
         }
-        
-        if (c != ' ') {
+
+        if (c != ' ')
+        {
             putchar(c);
         }
-        
+
         space = c == ' ';
     }
 }
