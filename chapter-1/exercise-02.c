@@ -7,5 +7,4 @@ int main()
     printf("double quote: \"\n");
     printf("backslash: \\\n");
     printf("vertical tab: \v\n");
-    return 0;
 }
