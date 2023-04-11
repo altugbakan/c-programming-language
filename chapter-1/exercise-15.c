@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-float toCelsius(float fahr);
+float tocelsius(float fahr);
 
 int main()
 {
@@ -14,13 +14,13 @@ int main()
     fahr = lower;
     while (fahr <= upper)
     {
-        celsius = toCelsius(fahr);
+        celsius = tocelsius(fahr);
         printf("%3.0f %6.1f\n", fahr, celsius);
         fahr = fahr + step;
     }
 }
 
-float toCelsius(float fahr)
+float tocelsius(float fahr)
 {
     return (5.0 / 9.0) * (fahr - 32.0);
 }
