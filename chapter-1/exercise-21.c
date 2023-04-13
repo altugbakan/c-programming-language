@@ -31,7 +31,7 @@ int main()
             }
             else
                 for (; spaces > 0; --spaces)
-                    putchar('_');
+                    putchar(' ');
 
             if (c == '\n')
                 pos = -1;
