@@ -7,7 +7,7 @@ int main()
     char s1[] = "Hello, World!";
     char s2[] = "eo, Wld";
 
-    printf("any: %d\n", any(s1, s2));
+    printf("s1: %s\ns2: %s\nany(s1, s2): %d\n", s1, s2, any(s1, s2));
     return 0;
 }
 

@@ -7,8 +7,9 @@ int main()
     char s1[] = "Hello, World!";
     char s2[] = "Heo, Wd";
 
+    printf("s1: %s\ns2: %s\n", s1, s2);
     squeeze(s1, s2);
-    printf("squeeze: %s\n", s1);
+    printf("squeeze(s1, s2): %s\n", s1);
     return 0;
 }
 
