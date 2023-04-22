@@ -40,11 +40,11 @@ int main()
     printf("The maximum unsigned long value from limits.h is %lu\n", ULONG_MAX);
     printf("The maximum unsigned long value calculated is %lu\n", (unsigned long)~0);
     printf("\n");
-    printf("The minimum float value from float.h is %e\n", FLT_MIN);
-    printf("The maximum float value from float.h is %e\n", FLT_MAX);
+    printf("The least significant float value from float.h is %e\n", FLT_MIN);
+    printf("The most significant float value from float.h is %e\n", FLT_MAX);
     printf("\n");
-    printf("The minimum double value from float.h is %e\n", DBL_MIN);
-    printf("The maximum double value from float.h is %e\n", DBL_MAX);
+    printf("The least significant double value from float.h is %e\n", DBL_MIN);
+    printf("The most significant double value from float.h is %e\n", DBL_MAX);
 
     return 0;
 }
