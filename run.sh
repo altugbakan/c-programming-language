@@ -15,7 +15,14 @@ else
     FILENAME="chapter-$1/exercise-$2"
 fi
 
+# check special cases
+# if chapter 4, exercise 5
+if [ $1 -eq 4 ] && [ $2 -eq 5 ]
+then
+    LIBS="-lm"
+fi
+
 # compile the c file, run it, and delete the executable
-cc -o $FILENAME.out $FILENAME.c
+cc -o $FILENAME.out $FILENAME.c $LIBS
 ./$FILENAME.out
 rm $FILENAME.out
