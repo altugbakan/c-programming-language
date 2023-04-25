@@ -8,10 +8,6 @@
 int getop(char[]);
 void push(double);
 double pop();
-void print();
-void duplicate();
-void swap();
-void clear();
 
 int main()
 {
@@ -42,10 +38,6 @@ int main()
                 push(pop() / op2);
             else
                 printf("error: zero divisor\n");
-            break;
-        case '%':
-            op2 = pop();
-            push((int)pop() % (int)op2);
             break;
         /* Added 'sin' function */
         case 's':
@@ -94,52 +86,6 @@ double pop()
         printf("error: stack empty\n");
         return 0.0;
     }
-}
-
-void print()
-{
-    if (sp > 0)
-    {
-        printf("top element: %g\n", val[sp - 1]);
-    }
-    else
-    {
-        printf("error: stack empty\n");
-    }
-}
-
-void duplicate()
-{
-    if (sp > 0)
-    {
-        double temp = pop();
-        push(temp);
-        push(temp);
-    }
-    else
-    {
-        printf("error: stack empty\n");
-    }
-}
-
-void swap()
-{
-    if (sp > 1)
-    {
-        double temp1 = pop();
-        double temp2 = pop();
-        push(temp1);
-        push(temp2);
-    }
-    else
-    {
-        printf("error: not enough elements in stack\n");
-    }
-}
-
-void clear()
-{
-    sp = 0;
 }
 
 #include <ctype.h>
