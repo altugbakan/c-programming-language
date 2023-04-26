@@ -14,6 +14,8 @@ int main()
     itoa(num, s);
 
     printf("num = %d, itoa(num) = %s\n", num, s);
+
+    return 0;
 }
 
 void itoa(int n, char s[])

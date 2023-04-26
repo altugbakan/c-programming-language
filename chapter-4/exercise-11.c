@@ -17,6 +17,8 @@ int main()
 
     getop(s);
     printf("getop(): %s\n", s);
+
+    return 0;
 }
 
 int getch()

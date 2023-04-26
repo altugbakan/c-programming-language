@@ -16,6 +16,8 @@ int main()
 
     ungetch(EOF);
     printf("getch(): %d\n", getch());
+
+    return 0;
 }
 
 int getch()

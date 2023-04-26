@@ -9,6 +9,8 @@ int main()
     printf("s = %s, ", s);
     reverse(s);
     printf("reverse(s) = %s\n", s);
+
+    return 0;
 }
 
 void reverse(char s[])

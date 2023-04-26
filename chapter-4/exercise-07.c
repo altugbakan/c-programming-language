@@ -23,6 +23,8 @@ int main()
 
     printf("getch: %c\n", getch());
     printf("getch: %c\n", getch());
+
+    return 0;
 }
 
 int getch()

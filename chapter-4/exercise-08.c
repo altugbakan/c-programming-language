@@ -21,6 +21,8 @@ int main()
     printf("getch(): %c\n", getch());
     printf("enter a character: ");
     printf("getch(): %c\n", getch());
+
+    return 0;
 }
 
 int getch()
