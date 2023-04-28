@@ -24,5 +24,5 @@ fi
 
 # compile the c file, run it, and delete the executable
 cc -o $FILENAME.out $FILENAME.c $LIBS
-./$FILENAME.out
+./$FILENAME.out "${@:3}"
 rm $FILENAME.out
