@@ -4,8 +4,8 @@
 
 #define TABSIZE 8
 
-void entab(int tabsize);
-void detab(int tabsize);
+void entab(int);
+void detab(int);
 
 int main(int argc, char *argv[])
 {
@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
         if (argc > 2)
             tabsize = atoi(argv[2]);
     }
-    else 
+    else
     {
         printf("Usage: %s <entab|detab> [tabsize]\n", argv[0]);
         return 1;
