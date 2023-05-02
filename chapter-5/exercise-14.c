@@ -9,6 +9,7 @@ void writelines(char *lineptr[], int nlines, int reverse);
 
 void _qsort(void *lineptr[], int left, int right,
             int (*comp)(void *, void *));
+void swap(void *v[], int, int);
 int numcmp(const char *, const char *);
 
 int main(int argc, char *argv[])
@@ -60,7 +61,6 @@ void _qsort(void *v[], int left, int right,
             int (*comp)(void *, void *))
 {
     int i, last;
-    void swap(void *v[], int, int);
 
     if (left >= right)
         return;
