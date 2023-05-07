@@ -7,8 +7,6 @@
 #define AMOUNT 6
 
 int getword(char *, int);
-int getch();
-void ungetch(int);
 struct tnode *addtree(struct tnode *, char *);
 void treeprint(struct tnode *);
 
@@ -116,6 +114,9 @@ char *_strdup(char *s)
     return p;
 }
 
+int getch();
+void ungetch(int);
+
 int getword(char *word, int lim)
 {
     int c;
@@ -158,6 +159,19 @@ int getword(char *word, int lim)
         }
         else
             ungetch(c);
+    }
+    else if (c == '"' || c == '\'')
+    {
+        for (; --lim > 0; w++)
+        {
+            if (*w == c)
+            {
+                w++;
+                break;
+            }
+            else if (*w == EOF)
+                break;
+        }
     }
 
     *w = '\0';
