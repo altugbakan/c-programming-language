@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
     return 0;
 }
 
-struct tnode *talloc(void);
+struct tnode *talloc();
 char *_strdup(char *);
 
 struct tnode *addtree(struct tnode *p, char *w)
@@ -97,7 +97,7 @@ void treeprint(struct tnode *p)
     }
 }
 
-struct tnode *talloc(void)
+struct tnode *talloc()
 {
     return (struct tnode *)malloc(sizeof(struct tnode));
 }

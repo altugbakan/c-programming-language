@@ -2,7 +2,7 @@
 
 int binsearch(int x, int v[], int n);
 
-int main(void)
+int main()
 {
     int v[9];
 

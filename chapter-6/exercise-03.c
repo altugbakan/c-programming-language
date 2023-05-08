@@ -63,8 +63,8 @@ int wordsearch(char *word)
     return -1;
 }
 
-struct tnode *talloc(void);
-struct lnode *lalloc(void);
+struct tnode *talloc();
+struct lnode *lalloc();
 char *_strdup(char *);
 
 struct tnode *addtree(struct tnode *p, char *w)
@@ -120,12 +120,12 @@ void treeprint(struct tnode *p)
     }
 }
 
-struct tnode *talloc(void)
+struct tnode *talloc()
 {
     return (struct tnode *)malloc(sizeof(struct tnode));
 }
 
-struct lnode *lalloc(void)
+struct lnode *lalloc()
 {
     return (struct lnode *)malloc(sizeof(struct lnode));
 }
