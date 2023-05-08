@@ -20,9 +20,26 @@ fi
 if [ $1 -eq 4 ] && [ $2 -eq 5 ]
 then
     LIBS="-lm"
+# if chapter 7, exercise 1
+elif [ $1 -eq 7 ] && [ $2 -eq 1 ]
+then
+    if [ $# -lt 3 ]
+    then
+        echo "For Chapter 7, Exercise 1, the usage is" \
+        "$0 <chapter-num> <exercise-num> <upper|lower>"
+        exit 1
+    fi
+    
+    EXECNAME=$3
+fi
+
+# if no EXECNAME, set it to FILENAME
+if [ -z $EXECNAME ]
+then
+    EXECNAME=$FILENAME
 fi
 
 # compile the c file, run it, and delete the executable
-cc -o $FILENAME.out $FILENAME.c $LIBS
-./$FILENAME.out "${@:3}"
-rm $FILENAME.out
+cc -o $EXECNAME.out $FILENAME.c $LIBS
+./$EXECNAME.out "${@:3}"
+rm $EXECNAME.out
