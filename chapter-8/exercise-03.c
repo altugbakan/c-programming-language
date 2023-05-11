@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include "syscalls.h"
 
+#undef NULL
+#define NULL 0
 #define EOF (-1)
 #define BUFSIZ 1024
 #define OPEN_MAX 20
@@ -194,12 +196,7 @@ int _flushbuf(int ch, _FILE *fp)
 
 int _fflush(_FILE *fp)
 {
-    int rc;
-
-    if (!fp || !fp->fd)
-        return EOF;
-
-    if ((fp->flag & (_WRITE | _EOF | _ERR)) != _WRITE)
+    if (!fp || !fp->fd || (fp->flag & (_WRITE | _EOF | _ERR)) != _WRITE)
         return EOF;
 
     return _flushbuf(0, fp);
