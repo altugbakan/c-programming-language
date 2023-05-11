@@ -10,7 +10,7 @@ int main()
     int index = 0;
 
     for (; *s != '\0'; s++)
-        if (iscntrl(*s))
+        if (!isgraph(*s))
         {
             if (index + OCTALSIZE > MAXLINE)
             {
